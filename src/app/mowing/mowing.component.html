@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<h1>Mowing List</h1>
+		</div>
+	</div>
+	<div class="list-group">
+		<div class="row list-group-item list-group-header">
+			<div class="col-sm-1">
+				Done
+			</div>
+			<div class="col-sm-1">
+				Must
+			</div>
+			<div class="col-sm-9">
+				Description
+			</div>
+			<div class="col-sm-1">
+				Location
+			</div>
+		</div>
+		<div class="row list-group-item" *ngFor="let mowing of mowingList">
+			<div class="col-sm-1">
+				<input class="form-check-input" type="checkbox">
+			</div>
+			<div class="col-sm-1">
+				<i *ngIf="mowing.required" class="fa fa-certificate" ></i>
+			</div>
+			<div class="col-sm-9">
+				{{ mowing.description }}
+			</div>
+			<div class="col-sm-1">
+				<i class="fa fa-map-marker fa-2x" ></i>
+			</div>
+		</div>
+	</div>
+	
+</div>
